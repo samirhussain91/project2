@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Be Mine?</title>
+  <link rel="stylesheet" href="ss.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Hey, Shreya ❤️</h1>
+    <p class="message">I just wanted to ask you something really special...</p>
+
+    <button class="proposal-btn" onclick="showProposal()">Click Here 💌</button>
+
+    <div id="proposal-box" class="hidden">
+      <h2>Will You Be Mine Forever? 💍</h2>
+      <div class="buttons">
+        <button class="yes-btn" onclick="answer('yes')">Yes 💖</button>
+        <button class="no-btn" onclick="answer('no')">No 😢</button>
+      </div>
+    </div>
+
+    <p id="response" class="response"></p>
+  </div>
+
+  <script>
+    function showProposal() {
+      document.getElementById("proposal-box").classList.remove("hidden");
+    }
+
+    function answer(choice) {
+      const response = document.getElementById("response");
+      if (choice === 'yes') {
+        response.innerHTML = "Yay! You just made me the happiest person alive! 💞💐";
+      } else {
+        response.innerHTML = "Aww... I’ll still cherish you always 💔";
+      }
+    }
+  </script>
+</body>
+</html>
